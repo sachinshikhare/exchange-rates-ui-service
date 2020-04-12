@@ -1,0 +1,41 @@
+<!--<div ngIf="exchangeRatesFetched">-->
+<!--  Exchange rates fetched and saved to data-->
+<!--</div>-->
+Hello {{username}},
+<br/>
+<div [hidden]="!exchangeRatesSavedToDB" >
+  <br/>&nbsp;&nbsp;&nbsp;
+  Exchange rates fetched and saved in database!
+
+  <br/>&nbsp;&nbsp;&nbsp;
+  <br/>&nbsp;&nbsp;&nbsp;
+  <button type="submit" (click)="onDisplayExchangeRates()" class="btn btn-success">Display</button>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <button align="right" type="submit" (click)="onLogout()" class="btn btn-success">Logout</button>
+
+  <hr/>
+  <br/>
+  <br/>
+
+  <div [hidden]="!exchangeRatesAvailable">
+    <span>Base currency used here is: {{baseCurrency}}</span>
+    <br/>
+    <br />
+    <div>
+      <table border="1">
+        <tr>
+          <th>Currency</th>
+          <th *ngFor="let monthCounter of arrayTwo(arrLength)">Month {{monthCounter + 1}}</th>
+        </tr>
+        <tr *ngFor="let row of dataToDisplay">
+          <td *ngFor="let data of row">{{data}}</td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    {{note}}
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>
