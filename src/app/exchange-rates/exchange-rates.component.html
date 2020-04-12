@@ -1,7 +1,13 @@
 <!--<div ngIf="exchangeRatesFetched">-->
 <!--  Exchange rates fetched and saved to data-->
 <!--</div>-->
-Hello {{username}},
+<div>
+  Hello {{username}},
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button align="right" type="submit" (click)="onLogout()" class="btn btn-success">Logout</button>
+</div>
 <br/>
 <div [hidden]="!exchangeRatesSavedToDB" >
   <br/>&nbsp;&nbsp;&nbsp;
@@ -11,7 +17,7 @@ Hello {{username}},
   <br/>&nbsp;&nbsp;&nbsp;
   <button type="submit" (click)="onDisplayExchangeRates()" class="btn btn-success">Display</button>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <button align="right" type="submit" (click)="onLogout()" class="btn btn-success">Logout</button>
+
 
   <hr/>
   <br/>
